@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+  }
+
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* 換行 */
+    padding: 10px;
+    gap: 10px; /* 卡片間距 */
+    max-height: 90vh; /* 限制高度，讓 scroll 生效 */
+    overflow-y: auto; /* 可垂直滾動 */
+  }
+
+  .photo-card {
+    flex: 1 1 calc(50% - 10px); /* 一行兩個 */
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .photo-card:hover {
+    transform: scale(1.02);
+  }
+
+  .photo-box {
+    height: 150px;
+    background-color: #ddd; /* 先用灰色代替照片 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .photo-info {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .uploader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .uploader img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .photo-name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .uploader-id {
+    font-size: 12px;
+    color: #888;
+  }

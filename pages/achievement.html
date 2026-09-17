@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO:Lab AI</title>
+
+</head>
+<body>
+<link rel="stylesheet" href="pages/achievement.css">
+
+
+<div class="achievementCard">
+  <!-- 頭像 -->
+        <div class="achAvatar">
+            <img src= "pages/image/ian.jpg"  alt="">
+  </div>
+
+  <!-- 月份切換 -->
+  <div class="monthBar">
+    <button class="arrow" onclick="changeMonth(-1)">&lt;</button>
+    <span id="monthText" >2025 十一月</span>
+    <button class="arrow" onclick="changeMonth(1)">&gt;</button>
+  </div>
+
+  <!-- 獎章區 -->
+  <div class="medalRow">
+    <div class="medalItem">
+      <img class="medal" onclick="loadPage('pages/achieve_save.html')" src="pages/image/獎牌-3D-收藏筆記.png" alt="">
+      <p>收藏筆記次數</p>
+    </div>
+
+    <div class="medalItem">
+      <img class="medal" onclick="loadPage('pages/achieve_post.html')" src="pages/image/獎牌-全白-發筆記_0.png" alt="">
+      <p>發筆記次數</p>
+    </div>
+
+    <div class="medalItem">
+      <img class="medal" onclick="loadPage('pages/achieve_beSaved.html')" src="pages/image/獎牌-3D-被收藏.png" alt="">
+      <p>筆記被收藏次數</p>
+    </div>
+  </div>
+</div>
+
+<div class="most">
+
+    <div class="mostSaved">
+        <img src="pages/notes/basic/handNote/basic2.jpg">
+        <p>西西里防禦</p>
+        <h3>獲 1314 次收藏</h3>
+    </div>
+    <div class="mostSaved">
+        <img src="pages/notes/basic/handNote/basic3-1.jpg" alt="">
+        <p>創業概論</p>
+        <h3>獲 1088 次收藏</h3>
+    </div>
+</div>
+
+
+
+<!-- BottomBar -->
+        <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+
+<script src="pages/achievement.js"></script>
+</body>
+</html>

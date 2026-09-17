@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CO:Lab 登入</title>
+
+</head>
+<body>
+  <link rel="stylesheet" href="pages/login.css" />
+  <div class="login-page">
+    <div class="logo">
+      <img src="pages/logo.png" alt="CO:Lab logo">
+    </div>
+
+    <h1>您好！</h1>
+    <p class="subtitle">歡迎登錄 CO:Lab</p>
+
+    <div class="form">
+      <input type="text" id="account" placeholder="帳號">
+
+      <div class="password-box">
+        <input type="password" id="password" placeholder="密碼">
+        <img src="pages/Icon.png" onclick="togglePassword()" class="eye">
+      </div>
+
+      <button class="login-btn" onclick="login()">登錄</button>
+
+      <a href="#" class="forgot">忘記密碼？</a>
+    </div>
+
+    <label class="policy">
+      <input type="checkbox">
+      我已閱讀並同意 <a href="#">用戶協議</a> 和 <a href="#">隱私協議</a>
+    </label>
+  </div>
+<script src="pages/login.js"></script>
+</body>
+</html>

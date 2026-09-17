@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>建立貼文</title>
+</head>
+<body>
+  <link rel="stylesheet" href="pages/post-create.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="loadPage('pages/main.html')">&lt;&nbsp;&nbsp;&nbsp;筆記 & 作品</button>
+</header>
+
+<!-- 圖片預覽區 -->
+<div class="image-preview" id="preview"></div>
+
+<!-- 表單 -->
+<div class="form">
+  <input type="text" class="title-input" placeholder="標題">
+
+  <textarea class="content-input" placeholder="內容文本" maxlength="200"></textarea>
+</div>
+
+<!-- 底部操作 -->
+<div class="bottom-bar">
+  <button class="category-btn">課程及分類</button>
+
+  <div class="action-btns">
+    <button class="draft-btn">存為草稿</button>
+    <button class="publish-btn">發布</button>
+  </div>
+</div>
+
+
+<!-- 課程分類彈窗 -->
+<div class="course-modal" id="courseModal">
+  <div class="course-card">
+    <h3>課程</h3>
+
+    <ul class="course-list">
+  <li><span class="dot"></span> 基本設計 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 互動設計概論 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 設計史 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 故事板與角色設計 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 設計表現法 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 數位向量繪圖 <span class="arrow">›</span></li>
+  <li><span class="dot"></span> 3D <span class="arrow">›</span></li>
+</ul>
+
+  </div>
+</div>
+
+<script src="pages/post-create.js"></script>
+</body>
+</html>

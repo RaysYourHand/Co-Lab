@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO:Lab AI</title>
+
+</head>
+<body>
+<link rel="stylesheet" href="pages/achieve_post.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="loadPage('pages/achievement.html')">&lt;&nbsp;&nbsp;&nbsp;發筆記次數</button>
+</header>
+
+<div class="achievementCard">
+  <!-- 頭像 -->
+  <div class="achAvatar">
+    <img src= "pages/image/ian.jpg"  alt="">
+  </div>
+
+  <!-- 月份切換 -->
+  <div class="monthBar">
+    <button class="arrow" onclick="changeMonth(-1)">&lt;</button>
+    <span id="monthText" >2025 十一月</span>
+    <button class="arrow" onclick="changeMonth(1)">&gt;</button>
+  </div>
+
+  <!-- 獎章區 -->
+
+    <div class="medalItem">
+      <img id="medalImg" class="medal" src="pages/image/獎牌-3D-發筆記.png" alt="">
+      <p>發筆記次數</p>
+
+        <div class="progressWrap">
+            <div class="progressBar">
+                <div id="progressFill" class="progressFill" style="width: 70%;"></div>
+            </div>
+            <span id="progressText" class="progressText">(7/10)</span>
+        </div>
+    </div>
+
+
+
+<!-- BottomBar -->
+        <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+
+<script src="pages/achieve_post.js"></script>
+</body>
+</html>

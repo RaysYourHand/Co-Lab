@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f7;
+}
+
+/* ✅ 上方 */
+.top-bar {
+  background: linear-gradient(#6d88a8, #8fa7c2);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topTab{
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 10px;
+  justify-content: flex-start
+}
+
+.search-input {
+  border-radius: 20px;
+  border: none;
+  padding: 6px 12px;
+  width: 30%;
+  position: static;
+  right: 3%;
+}
+
+/* ✅ 主要內容區 */
+.container {
+  padding: 12px;
+}
+
+/* ✅ 學伴動態 */
+.pupuilBg {
+  background: #f2e3d4;
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.pupuilNotes {
+  background: #bfcfe0;
+  height: 160px;
+  border-radius: 12px;
+}
+
+/* ✅ 分類按鈕 */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.tab {
+  flex: 1;  
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  background: #ddd;
+}
+
+/*.tabs button:hover {
+  background-color: #000000;       解決不了會覆蓋藍色背景
+}*/
+
+.tab.active {
+  background: #8da2bb;
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+
+}
+#all {
+  display: block;
+}
+
+/* ✅ 底部導覽 */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #8da2bb;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  color: white;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  opacity: 0;
+  background-color: black;
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+.overlay.show {
+  opacity: 0.5;
+  pointer-events: auto;
+  }
+.popUp {
+  position: fixed;
+  bottom: 0%;
+  background-color: #f2e3d4;
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  height: 40%;
+  z-index: 10;
+
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.popUp.show {
+  transform: translateY(0);
+}
+.upload{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 80%;
+  height: 25%;
+  margin: 5% auto;
+  font-size: 24px;
+}
+.bottomBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+.plus{
+  background: #a47b56;
+  border-radius: 50%;
+  padding: 8px 14px;
+  font-size: 20px;
+}
+
+.searchPanel {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%)translateY(-150%);
+  width: 90%;
+  max-width: 400px;
+  background: linear-gradient(#4a6b8a, #6b8aa5);
+  border-radius: 20px;
+  padding: 20px;
+  /*display: none;*/
+  z-index: 10;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+.searchPanel.show {
+  transform: translateX(-50%)translateY(0%);
+}
+
+.searchPanel input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  border: none;
+}
+
+.searchPanel .category {
+  margin-bottom: 12px;
+}
+
+.searchPanel .category h4 {
+  margin-bottom: 6px;
+}
+
+.searchPanel button {
+  margin: 2px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.3);
+  color: white;
+}
+

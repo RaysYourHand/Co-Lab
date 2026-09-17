@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO:Lab AI</title>
+
+</head>
+<body class="preload">
+<link rel="stylesheet" href="pages/course.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="loadPage('pages/main.html')">&lt;&nbsp;&nbsp;&nbsp;課程</button>
+</header>
+
+<div class="addCourse">
+    <p>加入課程</p>
+    <div class="addBar">
+            <input type="text" id="courseInput" placeholder="輸入課程代碼">
+            <img src="pages/image/icon-搜尋 brown.png" onclick="checkCourseCode()">
+    </div>
+
+</div>
+
+<div class="courseContainer">
+    <div class="courseBox">
+        <img src="pages/image/adobeAI.png" onclick="loadPage('pages/course-vector.html')">
+        <h2>數位向量繪圖</h2>
+    </div>
+    <div class="courseBox">
+        <img src="pages/image/設計史.png" onclick="loadPage('pages/course-history.html')">
+        <h2>設計史</h2>
+    </div>
+    <div class="courseBox">
+        <img src="pages/image/設計表現法.png" onclick="loadPage('pages/course-present.html')">
+        <h2>設計表現法</h2>
+    </div>
+    <div class="courseBox">
+        <img src="pages/image/互動設計概論.png" onclick="loadPage('pages/course-intro.html')">
+        <h2>互動設計概論</h2>
+    </div>
+    <div class="courseBox courseAdd" onclick="addCourse()">
+        <button class="add" style="font-size: 80px;">+</button>
+        <h2>新增課程</h2>
+    </div>
+
+</div>
+
+        <button class="fab" onclick="popUp()" >+</button>
+<div class="overlay" onclick="popUpBack()"></div>
+<div class="popUp">
+    <div class="popUpContainer">
+    <button class="upload picture" >圖片</button>
+    <button class="upload text">文字</button>
+    <button class="upload file" onclick="triggerFile('*')">文件</button>
+    <button class="upload cancel" onclick="popUpBack()">取消</button>
+    <input type="file" id="fileInput" style="display:none">
+    </div>
+</div>
+
+
+<!-- BottomBar -->
+        <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+<script src="pages/course.js"></script>
+</body>
+</html>

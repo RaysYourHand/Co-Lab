@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品頁面</title>
+
+</head>
+<body>
+    <link rel="stylesheet" href="pages/post.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="goBack()">&lt;&nbsp;&nbsp;&nbsp;聊天室</button>
+</header>
+
+
+<div class="image-box">
+  <div class="image-track" id="imageTrack"></div>
+  <div class="favorite-badge">
+    收藏：<span class="fav-count">10</span>
+  </div>
+</div>
+
+<div class="dots" id="dots"></div>
+
+<div class="content">
+    <h2 id="postTitle"></h2>
+    <p id="postText"></p>
+    <p class="tags" id="postTags"></p>
+</div>
+
+
+<div class="bottom-bar">
+    <div class="message-input">
+        <input type="text" placeholder="私訊作者…" />
+        <img src="pages/image/textBar123.png" class="input-icon">
+    </div>
+
+    <div class="icons">
+        <img src="pages/image/icon-收藏.png" class="icon save">
+        <img src="pages/image/icon-ai.png" class="icon ai">
+        <img src="pages/image/icon-分享.png" class="icon share">
+    </div>
+</div>
+
+            <div class="user-modal-overlay">
+  <div class="user-modal">
+
+    <!-- 搜尋列 -->
+    <div class="user-modal-search">
+      <span class="link-icon">🔗</span>
+      <div class="search-input"></div>
+    </div>
+
+    <!-- 使用者列表 -->
+    <div class="user-list">
+      <div class="user-item">
+        <div class="avatar"></div>
+        <div class="info">
+          <div class="name">user1</div>
+          <div class="id">@ID111</div>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="user-item">
+        <div class="avatar tomato"></div>
+        <div class="info">
+          <div class="name">user2</div>
+          <div class="id">@ID2222</div>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="user-item">
+        <div class="avatar photo"></div>
+        <div class="info">
+          <div class="name">黃儀婷</div>
+          <div class="id">@1T521</div>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="user-item">
+        <div class="avatar cat"></div>
+        <div class="info">
+          <div class="name">user4</div>
+          <div class="id">@ID4444</div>
+        </div>
+        <div class="radio"></div>
+      </div>
+
+      <div class="user-item">
+        <div class="avatar emoji"></div>
+        <div class="info">
+          <div class="name">user5</div>
+          <div class="id">@ID5555</div>
+        </div>
+        <div class="radio"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <div class="lightbox" id="lightbox">
+  <img id="lightboxImg">
+    </div>
+
+    
+        <script src="pages/post.js"></script>
+</body>
+</html>

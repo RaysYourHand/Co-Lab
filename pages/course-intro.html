@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO:Lab AI</title>
+
+</head>
+<body>
+
+<link rel="stylesheet" href="pages/course-history.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="loadPage('pages/course.html')">&lt;&nbsp;&nbsp;&nbsp;互動設計概論</button>
+    <img class="search" src="pages/image/icon-搜尋 white.png" onclick="searchPanelUp()">
+</header>
+
+<div class="cat">
+    <div id="tabAll" class="tab active" onclick="initTabs('all', 'tabAll')">全部</div>
+    <div id="tabNote" class="tab" onclick="initTabs('note', 'tabNote')" >筆記</div>
+    <div id="tabWork" class="tab" onclick="initTabs('work', 'tabWork')" >作品</div>
+    <!-- 底線 -->
+    <div class="underline"></div>
+</div>
+ 
+
+    <button class="fab" onclick="popUp()" >+</button>
+<div class="overlay" onclick="popUpBack()"></div>
+<div class="popUp">
+    <div class="popUpContainer">
+    <button class="upload picture" onclick="selectFiles('image')">圖片</button>
+    <button class="upload text" >文字</button>
+    <button class="upload file" onclick="selectFiles('file')">文件</button>
+    <button class="upload cancel" onclick="popUpBack()">取消</button>
+    <input type="file"id="fileInput"style="display:none"onchange="handleFileChange(event)">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel search-panel">
+  <!-- 搜尋列 -->
+  <div class="search-bar">
+    <input type="text" placeholder="搜尋">
+    <img src="pages/image/searchMirror.png" alt="" class="icon">
+  </div>
+
+  <h3>全部</h3>
+  <div class="chips">
+    <button class="chip active">推薦</button>
+    <button class="chip">最新發布</button>
+  </div>
+
+  <h3>筆記總類</h3>
+  <div class="chips">
+    <button class="chip active">全部</button>
+    <button class="chip">圖片</button>
+    <button class="chip">文件</button>
+    <button class="chip">文字</button>
+  </div>
+
+  <h3>發布時間</h3>
+  <div class="chips">
+    <button class="chip active">全部</button>
+    <button class="chip">一週內</button>
+    <button class="chip">一學期內</button>
+    <button class="chip">一年內</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="all" class="courseContainer active" >
+    
+    <div id="intro1" class="courseBox" onclick="openPost('intro1', 'pages/course-intro.html')">
+    <div class="imgBox">
+      <img src="pages/notes/intro/handNote/intro1.jpg" alt="">
+    </div>
+    <h2>轉譯及解讀文本</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+    <div id="forever" class="courseBox" onclick="openPost('forever', 'pages/course-intro.html')">
+    <div class="imgBox">
+      <img src="pages/forever/forever (1).jpg" alt="">
+    </div>
+    <h2>畫作集</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+
+</div>
+
+<div id="note" class="courseContainer" >
+  <div id="intro1" class="courseBox" onclick="openPost('intro1', 'pages/course-intro.html')">
+    <div class="imgBox">
+      <img src="pages/notes/intro/handNote/intro1.jpg" alt="">
+    </div>
+    <h2>轉譯及解讀文本</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+</div>
+
+<div id="work" class="courseContainer" >
+ <div id="forever" class="courseBox" onclick="openPost('forever', 'pages/course-intro.html')">
+    <div class="imgBox">
+      <img src="pages/forever/forever (1).jpg" alt="">
+    </div>
+    <h2>畫作集</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- BottomBar -->
+    <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+
+ 
+        <script src="pages/course-history.js" ></script>
+</body>
+</html>

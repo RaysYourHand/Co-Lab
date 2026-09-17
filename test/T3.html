@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>學伴動態</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+      <link rel="stylesheet" href="T3.css">
+        <!-- TopBar -->
+        <header class="top-bar">
+            <button class="topTab">學伴</button>
+            <button class="topTab">總覽</button>
+            <button class="topTab">課程</button>
+            <input type="text" placeholder="搜尋" class="search-input" onclick="togglePanel()">
+        </header>
+        
+
+        <main class="container">
+            <!-- pupilSection -->
+            <section class="pupuilBg">
+                <h2>學伴動態</h2>
+                <div class="pupuilNotes"></div>
+            </section>
+
+            <!-- category -->
+            <div class="tabs">
+                <button class="tab active" onclick="openCat(event,'all')">全部</button>
+                <button class="tab" onclick="openCat(event,'notes')">筆記</button>
+                <button class="tab" onclick="openCat(event,'projects')">專題 / 作品</button>
+            </div>
+            <!-- tab content -->
+            <div id="all" class="tabcontent">
+                <h3>all</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div id="notes" class="tabcontent">
+                <h3>notes</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <div id="projects" class="tabcontent">
+                <h3>projects</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+        </main>
+        
+        <div class="overlay" onclick="closePanel()" onclick="closePopUp()" ></div>
+        <div class="searchPanel" id="searchPanel">
+    
+    
+        <input type="text" placeholder="搜尋" class="search-input">
+
+    <div class="category">
+        <h4>全部</h4>
+        <button>推薦</button>
+        <button>最新發佈</button>
+    </div>
+
+    <div class="category">
+        <h4>筆記總類</h4>
+        <button >全部</button>
+        <button >文字</button>
+        <button>圖片</button>
+    </div>
+
+    <div class="category">
+        <h4>發布時間</h4>
+        <button >全部</button>
+        <button >一週內</button>
+        <button >一學期內</button>
+        <button >一年內</button>
+    </div>
+
+    <button class="closeBtn">關閉</button>
+</div>
+
+<div class="popUp">
+            <button class="upload picture" >圖片</button>
+            <button class="upload text">文字</button>
+            <button class="upload file" onclick="triggerFile('*')">文件</button>
+             <input type="file" id="fileInput" style="display:none">
+        </div>
+
+        
+        <!-- BottomBar -->
+        <nav class="bottom-nav">
+            <button class="bottomBtn message"onclick="loadPage('pages/message.html')">消息</button>
+            <button class="bottomBtn plus" onclick="togglePopUp()">+</button>
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')">我的 </button>
+        </nav>
+    <script src="T3.js"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #f5f6f7;
+}
+
+.top-bar {
+  background-color: #1B3C53;
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}   
+.textRoom {
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.username {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.image-box {
+  width: 100%;
+  height: 280px;
+    background-color: #b5cde1;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.active {
+  background: #333;
+}
+
+
+
+/* 內容區 */
+.content {
+    padding: 12px;
+}
+
+.content h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+}
+
+.content p {
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.tags {
+    color: #7d7d7d;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 燈箱 */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 底部工具列 */
+.bottom-bar {
+    position: fixed;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    background: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 私訊輸入框（膠囊） */
+.message-input {
+    width: 60%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #f3e6d8;
+    border-radius: 99px;
+    padding: 6px 12px;
+
+}
+
+.message-input input {
+    width: 100%;
+    color: #8D9FAE;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+/* 右側 icons */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.icon.send {
+    transform: rotate(15deg);
+}
+
+.save{
+    width: 20px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Modal Overlay ===== */
+/* ===== Modal Overlay ===== */
+.user-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+
+  /* 預設隱藏 */
+  display: none;
+
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 9999;
+}
+
+/* 顯示時用 */
+.user-modal-overlay.show {
+  display: flex;
+}
+
+/* ===== Modal Box（底部彈出） ===== */
+.user-modal {
+  width: 100%;
+  max-width: 430px;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  padding: 16px;
+  max-height: 70vh;
+  overflow-y: auto;
+
+  animation: slideUp 0.25s ease-out;
+}
+
+/* 動畫 */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ===== Search ===== */
+.user-modal-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.user-modal-search .link-icon {
+  font-size: 18px;
+}
+
+.user-modal-search .search-input {
+  flex: 1;
+  height: 28px;
+  background: #e0e0e0;
+  border-radius: 14px;
+}
+
+/* ===== User List ===== */
+.user-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Avatar */
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ddd;
+  margin-right: 12px;
+}
+
+.avatar.tomato { background: #ff6b6b; }
+.avatar.photo { background: #555; }
+.avatar.cat { background: #e5e5e5; }
+.avatar.emoji { background: #ffcc66; }
+
+/* Info */
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: 600;
+  color: #0a2a43;
+}
+
+.id {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Radio */
+.radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #0a2a43;
+  border-radius: 50%;
+}
+
+
+/* 圖片左下角收藏標籤 */
+.favorite-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  pointer-events: none; /* 不影響圖片點擊 */
+}
+
+/* 數字微微強調 */
+.favorite-badge .fav-count {
+  font-weight: 600;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CO:Lab AI</title>
+
+</head>
+<body>
+<link rel="stylesheet" href="pages/ai.css">
+<header class="top-bar">
+    <button class="textRoom" onclick="loadPage('pages/main.html')">&lt;&nbsp;&nbsp;&nbsp;筆記 & 作品</button>
+</header>
+
+<div class="card">
+    
+    <h2>請選擇：</h2>
+    <button class="btn" onclick="sendPrompt('question')">出10個問題及答案</button>
+    <button class="btn" onclick="sendPrompt('summary')">筆記重點整理</button>
+    <button class="btn" onclick="sendPrompt('mindmap')">製作心智圖</button>
+</div>
+
+<!-- 這裡改成聊天容器 -->
+<div class="chat-container" id="chat-container"></div>
+
+<script src="pages/ai.js"></script>
+</body>
+</html>

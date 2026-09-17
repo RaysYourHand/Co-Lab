@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聊天室</title>
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="pages/chat.css">
+<header class="top-bar" id="chatHeader">
+    <button class="textRoom" onclick="loadPage('pages/message.html')">
+        &lt;&nbsp;&nbsp;&nbsp;<span id="chatTitle">聊天室</span>
+    </button>
+</header>
+
+
+<div class="chat-container">
+    <div class="messages" id="messages">
+        <!-- 範例對方訊息 -->
+        <div class="message other">你好！</div>
+        <div class="message other">這是一個聊天畫面</div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="chatInput" placeholder="輸入文字…">
+        <button class="send" id="sendBtn" onclick="sendMessage()"></button>
+    </div>
+</div>
+<script src="pages/chat.js"></script>
+</body>
+</html>

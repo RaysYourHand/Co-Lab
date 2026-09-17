@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #f5f6f7;
+}
+
+.top-bar {
+  background-color: #1B3C53;
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}   
+.textRoom {
+    position: absolute;
+    left: 5%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.chat-container {
+    max-width: 420px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+/* 訊息區 */
+.messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+/* 通用訊息 */
+.message {
+    max-width: 70%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* 自己（右邊） */
+.message.me {
+    background: #8AA9C5;
+    color: #fff;
+    margin-left: auto;
+    border-top-right-radius: 4px;
+}
+
+/* 對方（左邊） */
+.message.other {
+    background: #DEE5EB;
+    color: #000;
+    margin-right: auto;
+    border-top-left-radius: 4px;
+}
+
+
+
+
+/* 輸入區 */
+.input-area {
+    display: flex;
+    padding: 10px;
+position: fixed;
+ bottom: 0;
+ width: 100%;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #EFEFF0;
+    outline: none;
+    font-size: 14px;
+}
+
+.send {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    /* 圖片 */
+    background-image: url("image/icon-分享.png"); /* ← 換成你的圖片路徑 */
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #8AA9C5; /* 可留可刪 */
+    padding: 0;
+}

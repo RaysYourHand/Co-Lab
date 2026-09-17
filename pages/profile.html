@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile UI</title>
+
+</head>
+<body>
+    <link rel="stylesheet" href="pages/profile.css">
+
+<div class="topPart">
+  <div class="profileHeader">
+    <img class="avatar" src="pages/image/ian.jpg">
+    <div class="info">
+      <h2 class="username">張群儀</h2>
+      <p class="idNum">CO:Lab ID：@Ian1314</p>
+      <div class="tags">
+        <span>互動一</span>
+        <span>台灣</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="bio">我要努力讀書！</p>
+
+  <!-- 數據 -->
+  <div class="stats">
+    <div class="statsNum">42<span class="statsWord">筆記</span></div>
+    <div class="statsNum">163<span class="statsWord">粉絲</span></div>
+    <div class="statsNum">1526<span class="statsWord">被收藏數</span></div>
+  </div>
+</div>
+  <!-- 褐色切換區 -->
+  <div class="brownSwitch">
+    <div id="item_mine" class="brown active" onclick="initBrownSwitch('item_mine')">
+      <button class="brownBtn mine "></button>
+      <p class="title mine">我的</p>
+    </div>
+    <div id="item_save" class="brown" onclick="initBrownSwitch('item_save')">
+      <button class="brownBtn save"></button>
+      <p class="title save">收藏</p>
+    </div>
+    <div id="item_record" class="brown" onclick="initBrownSwitch('item_record')">
+      <button class="brownBtn record"></button>
+      <p class="title record">瀏覽紀錄</p>
+    </div>
+    <div id="item_pupil" class="brown" onclick="loadPage('pages/pupil.html')">
+      <button class="brownBtn pupil"></button>
+      <p class="title pupil">我的學伴</p>
+    </div>
+  </div>
+
+  <section class="section" id="s1">
+  <!-- 分類 -->
+  <div class="cat">
+    <div id="s1_tabAll" class="tab active" onclick="initTabs('s1_all', 's1_tabAll')">全部</div>
+    <div id="s1_tabNote" class="tab" onclick="initTabs('note', 's1_tabNote')" >筆記</div>
+    <div id="s1_tabWork" class="tab" onclick="initTabs('work', 's1_tabWork')" >作品</div>
+    <!-- 底線 -->
+    <div class="underline"></div>
+</div>
+
+
+  <div id="s1_all" class="courseContainer active">
+    <div id="basic2" class="courseBox" onclick="openPost('basic2', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/notes/basic/handNote/basic2.jpg" alt="">
+    </div>
+    <h2>西西里防禦</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+<div id="basic3" class="courseBox" onclick="openPost('basic3', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/notes/basic/handNote/basic3-1.jpg" alt="">
+    </div>
+    <h2>創業概論</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+  <div id="basic4" class="courseBox" onclick="openPost('basic4', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/minework/1.png" alt="">
+    </div>
+    <h2>CO:Lab</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+</div>
+
+<div id="note" class="courseContainer">
+    <div id="basic2" class="courseBox" onclick="openPost('basic2', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/notes/basic/handNote/basic2.jpg" alt="">
+    </div>
+    <h2>西西里防禦</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+<div id="basic3" class="courseBox" onclick="openPost('basic3', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/notes/basic/handNote/basic3-1.jpg" alt="">
+    </div>
+    <h2>創業概論</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+</div>
+
+<div id="work" class="courseContainer">
+    <div id="basic4" class="courseBox" onclick="openPost('basic4', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/minework/1.png" alt="">
+    </div>
+    <h2>CO:Lab</h2>
+    <div class="user">
+      <img src="pages/image/ian.jpg" alt="">
+      <span>Ian1314</span>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section" id="s2">
+  <!-- 分類 -->
+  <div class="cat">
+    <div id="s2_tabAll" class="tab active" onclick="initTabs('s2_all', 's2_tabAll')">全部</div>
+    <div id="s2_tabNote" class="tab" onclick="initTabs('note', 's2_tabNote')" >筆記</div>
+    <div id="s2_tabWork" class="tab" onclick="initTabs('work', 's2_tabWork')" >作品</div>
+    <!-- 底線 -->
+    <div class="underline"></div>
+</div>
+
+
+  <div id="s2_all" class="courseContainer active">
+    <div id="modern" class="courseBox" onclick="openPost('modern', 'profile/note.html')">
+    <div class="imgBox">
+      <img src="pages/modern/1.png" alt="">
+    </div>
+    <h2>摩登男孩購物路線</h2>
+    <div class="user">
+      <img src="pages/pfp/150 (2).jpg" alt="">
+      <span>elder100</span>
+    </div>
+  </div>
+    <div id="intro1" class="courseBox" onclick="openPost('intro1', 'profile/note.html')">
+    <div class="imgBox">
+      <img src="pages/notes/intro/handNote/intro1.jpg" alt="">
+    </div>
+    <h2>轉譯及解讀文本</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+</div>
+
+<div id="note" class="courseContainer">
+    <div id="intro1" class="courseBox" onclick="openPost('intro1', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/notes/intro/handNote/intro1.jpg" alt="">
+    </div>
+    <h2>轉譯及解讀文本</h2>
+    <div class="user">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+    </div>
+  </div>
+</div>
+
+<div id="work" class="courseContainer">
+    <div id="modern" class="courseBox" onclick="openPost('modern', 'pages/profile.html')">
+    <div class="imgBox">
+      <img src="pages/modern/1.png" alt="">
+    </div>
+    <h2>摩登男孩購物路線</h2>
+    <div class="user">
+      <img src="pages/pfp/150 (2).jpg" alt="">
+      <span>elder100</span>
+    </div>
+</div>
+</section>
+<section class="section" id="s3">
+  <!-- 分類 -->
+  <div class="cat">
+    <div id="s3_tabAll" class="tab active" onclick="initTabs('s3_all', 's3_tabAll')">全部</div>
+    <div id="s3_tabNote" class="tab" onclick="initTabs('note', 's3_tabNote')" >筆記</div>
+    <div id="s3_tabWork" class="tab" onclick="initTabs('work', 's3_tabWork')" >作品</div>
+    <!-- 底線 -->
+    <div class="underline"></div>
+</div>
+
+
+  <div id="s3_all" class="courseContainer active">
+    <div class="courseBox">
+        <img src="pages/image/adobeAI.png" alt="">
+        <h2>筆記1</h2>
+        <div class="user">
+            <img src= "pages/image/user.jpg" alt="">
+            <span>user006</span>
+        </div>
+    </div>
+    <div class="courseBox">
+        <img src="pages/image/設計史.png" alt="">
+        <h2>筆記2</h2>
+        <div class="user">
+            <img src= "pages/image/user.jpg" alt="">
+            <span>user006</span>
+        </div>
+    </div>
+    <div class="courseBox">
+        <img src="pages/image/設計表現法.png" alt="">
+        <h2>筆記3</h2>
+        <div class="user">
+            <img src= "https://i.pravatar.cc/100" alt="">
+            <span>user006</span>
+        </div>
+    </div>
+</div>
+
+<div id="note" class="courseContainer">
+    <div class="courseBox">
+        <img src="pages/image/互動設計概論.png" alt="">
+        <h2>筆記4</h2>
+        <div class="user">
+            <img src= "https://i.pravatar.cc/100" alt="">
+            <span>user006</span>
+        </div>
+    </div>
+</div>
+
+<div id="work" class="courseContainer">
+    <div class="courseBox">
+        <img src="pages/image/adobeAI.png" alt="">
+        <h2>筆記1</h2>
+        <div class="user">
+            <img src= "pages/image/user.jpg" alt="">
+            <span>user006</span>
+        </div>
+    </div>
+</div>
+</section>
+    
+
+    <!-- BottomBar -->
+      <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+        
+        <script src="/pages/profile.js"></script>
+</body>
+</html>

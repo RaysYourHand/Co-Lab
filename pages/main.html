@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>學伴動態</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+      <link rel="stylesheet" href="pages/main.css">
+        <!-- TopBar -->
+        <header class="top-bar">
+            <img src="pages/image/logo-橫式.png" style="width: 50%;height: auto;">
+        </header>
+        
+
+        <main class="container">
+            <!-- pupilSection -->
+            <section class="courseBg">
+                <div class="sectionHeader">
+                    <h2 style="  font-size: 20px; color: #1B3C53; margin: auto;margin-left: 0;">課程</h2>
+                    <button class="moreBtn" onclick="loadPage('pages/course.html')">&gt;</button>
+                </div>
+                
+                <div class="mainPgContainer">
+                    <div class="card" onclick="loadPage('pages/course-vector.html')">
+                        <img src="pages/image/adobeAI.png">
+                     </div>
+
+                     <div class="card" onclick="loadPage('pages/course-history.html')">
+                        <img src="pages/image/設計史.png">
+                     </div>
+
+                     <div class="card" onclick="loadPage('pages/course-present.html')">
+                        <img src="pages/image/設計表現法.png">
+                     </div>
+
+                     <div class="card" onclick="loadPage('pages/course-intro.html')">
+                        <img src="pages/image/互動設計概論.png">
+                     </div>
+                </div>
+            </section>
+            
+            <section class="noteBg">
+                <div class="sectionHeader">
+                    <h2 style="  font-size: 18px; color: #1B3C53; margin: auto;margin-left: 0;">筆記 & 作品</h2>
+                    <button class="moreBtn" onclick="loadPage('pages/note.html')">&gt;</button>
+                </div>
+                <div class="mainPgContainer">
+                    <div class="card">
+                        <img src="pages/notes/basic/handNote/basic1-1.jpg"onclick="openPost('basic1', 'pages/note.html')">
+                     </div>
+                    <div class="card">
+                        <img src="pages/minework/1.png"onclick="openPost('basic4', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/notes/history/handNote/history1-1.jpg"onclick="openPost('history1', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/modern/1.png"onclick="openPost('modern', 'note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/notes/intro/handNote/intro1.jpg"onclick="openPost('intro1', 'pages/note.html')">
+                     </div>
+
+                     <div class="card">
+                        <img src="pages/notes/present/handNote/story1-1.jpg"onclick="openPost('present1', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/Asset 1.png"onclick="openPost('logoDesign', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/notes/present/handNote/present2-1.jpg"onclick="openPost('present2', 'pages/note.html')">
+                     </div>
+
+                     <div class="card">
+                        <img src="pages/notes/intro/handNote/intro2-1.jpg"onclick="openPost('intro2', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/forever/forever (1).jpg"onclick="openPost('forever', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/notes/history/handNote/history2.jpg"onclick="openPost('history2', 'pages/note.html')">
+                     </div>
+
+                     <div class="card">
+                        <img src="pages/notes/basic/handNote/basic2.jpg"onclick="openPost('basic2', 'pages/note.html')">
+                     </div>
+                     <div class="card">
+                        <img src="pages/notes/basic/handNote/basic3-1.jpg"onclick="openPost('basic3', 'pages/note.html')">
+                     </div>
+
+                </div>
+            </section>
+
+           <section class="pupilSlider">
+
+  <div class="pupilPost">
+                <h2>學伴動態</h2>
+    <img src="pages/forever/forever (1).jpg"onclick="openPost('forever', 'pages/main.html')">
+    <div class="pupilContent">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+      
+    </div>
+    <p>畫作集</p>
+  </div>
+
+  <div class="pupilPost">
+    <h2>學伴動態</h2>
+    <img src="pages/notes/intro/handNote/intro1.jpg"onclick="openPost('intro1', 'pages/main.html')">
+    <div class="pupilContent">
+      <img src="pages/image/user.jpg" alt="">
+      <span>it520</span>
+      
+    </div>
+    <p>轉譯及解讀文本</p>
+  </div>
+
+</section>
+
+        </main>  
+</div>
+        
+
+    <button class="fab" onclick="popUp()" >+</button>
+<div class="overlay" onclick="popUpBack()"></div>
+<div class="popUp">
+    <div class="popUpContainer">
+<button class="upload picture" onclick="triggerFile('image/ *')">圖片</button>
+    <button class="upload text">文字</button>
+    <button class="upload file" onclick="triggerFile('*')">文件</button>
+    <button class="upload cancel" onclick="popUpBack()">取消</button>
+    <input type="file" id="fileInput" style="display:none" multiple>
+    </div>
+</div>
+
+
+
+        <!-- BottomBar -->
+        <nav class="bottom-nav">
+            <div class="nav-item">
+            <button class="bottomBtn mainPage"onclick="loadPage('pages/main.html')"></button>
+            <p>主頁</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn message" onclick="loadPage('pages/message.html')"></button>
+            <p style="color: white; width: auto; position: relative ;top:0 ;">消息</p>
+            </div>
+            <div class="nav-item">
+            <button class="bottomBtn achievement"onclick="loadPage('pages/achievement.html')"></button>
+            <p>成就</p>
+            </div>
+            <div class="nav-item">
+            <div class="nav-item">
+            <button class="bottomBtn mine"onclick="loadPage('pages/profile.html')"></button>
+            <p>我的</p>
+            </div>
+            <div class="nav-item">
+            
+        </nav>
+
+
+        <div id="page-transitionOut"></div>
+        <div id="page-transitionIn"></div>
+
+    <script src="pages/main.js"></script>
+</body>
+</html>

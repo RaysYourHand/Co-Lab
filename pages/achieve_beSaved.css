@@ -1,0 +1,253 @@
+    * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    body {
+        margin: 0;
+        font-family: 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(#9EC6E9, #DEE5EB, #FFFFFF);
+        height: 100vh;
+        overflow: hidden; /* ⬅ 關掉整頁滾動 */
+    }
+
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;              /* ⬅ 明確高度 */
+        background-color: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        z-index: 1000;
+    } 
+    .textRoom {
+        position: absolute;
+        left: 5%;
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #1B3C53;
+        cursor: pointer;   
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 成就卡片 */
+.achievementCard {
+  background: transparent;
+  
+  border-radius: 20px;
+  padding: 20px 16px 16px;
+  position: relative;
+  margin: 150px 16px 20px; /* ⬅ 關鍵：上面 96px */
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.8),
+    0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* 頭像 */
+.achAvatar {
+  position: absolute;
+  top: -42px;     /* 原本 -32，給一點空氣 */
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+
+.achAvatar img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border:  3px solid #1B3C53;
+  object-fit: cover;
+}
+
+.monthBar {
+  position: relative;   /* ⭐ 必加 */
+  z-index: 3;           /* ⭐ 比頭像大 */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: white;
+  border-radius: 20px;
+
+  width: fit-content;
+  min-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 14px;
+  color: #1B3C53;
+  font-weight: 600;
+}
+
+.monthBar span {
+  width: 96px;              /* ⭐ 關鍵 */
+  text-align: center;
+
+  display: inline-block;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  padding: 0;              
+  line-height: 1;            
+  font-size: 18px;
+  cursor: pointer;
+  color: #8da2bb;
+
+  display: flex;              
+  align-items: center;
+  padding: 6px 10px 4px 10px;
+}
+
+/* 單顆獎章 */
+.medalItem {
+  width: 100%;
+  text-align: center;
+  margin-top: 28px;
+}
+
+.medal {
+ width: 140px;
+  height: 140px;
+
+  object-fit: contain;
+  display: block;
+  
+  margin: 0 auto 12px;
+}
+
+.medalItem p {
+  font-size: 20px;
+  color: #1B3C53;
+  line-height: 1.4;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  justify-content: center;
+}
+
+.progressBar {
+  width: 240px;          /* ⬅ 原本 120px → 240px */
+  height: 14px;          /* ⬅ 原本 8px → 14px */
+  background: rgba(27, 60, 83, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: #1B3C53;
+  border-radius: 999px;
+}
+
+.progressText {
+  font-size: 16px;
+  color: #1B3C53;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-nav {
+  height: 68px;
+  width: 100%;
+  position: fixed;
+    left: 0;
+  bottom: 0;
+  background: #1B3C53;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  border-radius: 30px 30px 0 0;
+
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;     
+  color: white;            
+  font-size: 10px;
+}
+.nav-item p {
+  margin: 0px 0 0;        
+}
+.bottomBtn {
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+  border: none;
+  background-color:  transparent;
+}
+.bottomBtn.mainPage{
+  background-image: url("./image/icon-主頁 white.png");
+}
+.bottomBtn.message{
+  background-image: url('./image/icon-消息 white.png');
+}
+.bottomBtn.achievement{
+  background-image: url('./image/icon-成就-white.png');
+}
+.bottomBtn.mine {
+    background-image: url('./image/icon-我的-white.png');
+}

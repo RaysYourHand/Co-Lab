@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat UI</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    background: #ffffff;
+}
+
+.chat-container {
+    max-width: 420px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+/* 訊息區 */
+.messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+/* 通用訊息 */
+.message {
+    max-width: 70%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* 自己（右邊） */
+.message.me {
+    background: #8fb1cc;
+    color: #fff;
+    margin-left: auto;
+    border-top-right-radius: 4px;
+}
+
+/* 對方（左邊） */
+.message.other {
+    background: #e6edf3;
+    color: #000;
+    margin-right: auto;
+    border-top-left-radius: 4px;
+}
+
+
+/* 輸入區 */
+.input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #f1f1f1;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-area button {
+    margin-left: 8px;
+    padding: 0 16px;
+    border-radius: 20px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+    <div class="messages" id="messages">
+        <!-- 範例對方訊息 -->
+        <div class="message other">你好！</div>
+        <div class="message other">這是一個聊天畫面</div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="chatInput" placeholder="輸入文字…">
+        <button onclick="sendMessage()">送出</button>
+    </div>
+</div>
+
+<script>
+const input = document.getElementById("chatInput");
+const messages = document.getElementById("messages");
+
+function sendMessage() {
+    const text = input.value.trim();
+    if (text === "") return;
+
+    const msg = document.createElement("div");
+    msg.className = "message me";
+    msg.textContent = text;
+
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+
+    input.value = "";
+
+    // 模擬對方回覆（可刪）
+    setTimeout(() => {
+        const reply = document.createElement("div");
+        reply.className = "message other";
+        reply.textContent = "收到：" + text;
+        messages.appendChild(reply);
+        messages.scrollTop = messages.scrollHeight;
+    }, 600);
+}
+
+// Enter 送出
+input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
+</script>
+
+</body>
+</html>
